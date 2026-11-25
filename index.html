@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRUK HOLZ &amp; KUNST — Katalog nach Holzart (19 Fotos)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-paper: #F7F6F2;
+      --bg-surface: #FFFFFF;
+      --bg-muted: #ECEAE3;
+      --bg-forest: #1C2520;
+      --bg-forest-soft: #26322B;
+      --text-primary: #161816;
+      --text-secondary: #535852;
+      --text-muted: #787E77;
+      --accent-olive: #4A5D4E;
+      --accent-amber: #9E6B3B;
+      --border-subtle: rgba(22, 24, 22, 0.10);
+      --border-strong: rgba(22, 24, 22, 0.18);
+      --shadow-float: 0 22px 50px rgba(20, 26, 22, 0.11);
+      --shadow-card: 0 10px 28px rgba(20, 26, 22, 0.06);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-pill: 999px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-paper);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .floating-nav-wrap {
+      position: fixed;
+      top: 18px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      padding: 0 18px;
+      pointer-events: none;
+    }
+
+    .floating-nav {
+      pointer-events: auto;
+      width: 100%;
+      max-width: 1180px;
+      height: 66px;
+      padding: 0 18px 0 24px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow-float);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 0.96rem;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-olive);
+      box-shadow: 0 0 0 4px rgba(74, 93, 78, 0.16);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--bg-forest);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background: var(--bg-forest-soft);
+      box-shadow: 0 10px 22px rgba(28, 37, 32, 0.2);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+
+    .btn-outline:hover {
+      background: #FFFFFF;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .floating-hero-section {
+      padding-top: 106px;
+      padding-bottom: 52px;
+    }
+
+    .floating-stage {
+      background: linear-gradient(155deg, #FFFFFF 0%, #F2EFE8 100%);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      padding: 42px;
+      box-shadow: var(--shadow-float);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      background: rgba(74, 93, 78, 0.11);
+      color: var(--accent-olive);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      line-height: 1.03;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+    }
+
+    .hero-copy {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .metric-box strong {
+      display: block;
+      font-size: 1.12rem;
+      color: var(--text-primary);
+    }
+
+    .metric-box span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .showcase-reel-card {
+      background: var(--bg-forest);
+      border-radius: 26px;
+      padding: 18px;
+      color: #FFFFFF;
+      box-shadow: 0 24px 48px rgba(28, 37, 32, 0.22);
+    }
+
+    .showcase-viewport {
+      position: relative;
+      height: 360px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #232E27;
+    }
+
+    .showcase-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .showcase-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .showcase-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .showcase-overlay-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 28px 18px 16px;
+      background: linear-gradient(to top, rgba(16, 21, 18, 0.94), rgba(16, 21, 18, 0.3), transparent);
+    }
+
+    .showcase-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #C8D6CA;
+      margin-bottom: 4px;
+    }
+
+    .showcase-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      line-height: 1.15;
+      color: #FFFFFF;
+    }
+
+    .showcase-sub {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .showcase-controls-bar {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .reel-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .reel-tab-btn {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .reel-tab-btn.active {
+      background: #FFFFFF;
+      color: var(--bg-forest);
+      border-color: #FFFFFF;
+    }
+
+    .reel-nav-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .icon-circle-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 68px 0;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.85rem);
+      line-height: 1.08;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      max-width: 620px;
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      margin-top: 8px;
+    }
+
+    .species-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .species-overview-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .species-card-banner {
+      height: 165px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-muted);
+    }
+
+    .species-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      gap: 16px;
+    }
+
+    .species-list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .species-list li {
+      font-size: 0.89rem;
+      color: var(--text-secondary);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .species-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent-olive);
+      font-weight: 700;
+    }
+
+    .filter-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
+      margin-top: 26px;
+      margin-bottom: 28px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .filter-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      padding: 8px 15px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-strong);
+      background: var(--bg-paper);
+      color: var(--text-secondary);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-pill.active {
+      background: var(--bg-forest);
+      color: #FFFFFF;
+      border-color: var(--bg-forest);
+    }
+
+    .search-input, .form-control {
+      padding: 10px 15px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-strong);
+      background: var(--bg-paper);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+    }
+
+    .marketplace-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-media {
+      height: 205px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background-color: var(--bg-muted);
+    }
+
+    .product-species-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--accent-amber);
+      color: #FFFFFF;
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .product-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-cat {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-olive);
+      margin-bottom: 6px;
+    }
+
+    .product-title {
+      font-family: var(--font-display);
+      font-size: 1.48rem;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .product-price {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .product-unit {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(16, 21, 18, 0.62);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      width: 100%;
+      max-width: 500px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow-float);
+      position: relative;
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-paper);
+      cursor: pointer;
+    }
+
+    .checkout-summary {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin: 14px 0 18px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    .footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      padding: 34px 0;
+      margin-top: 40px;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .species-overview-grid,
+      .marketplace-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .floating-stage {
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-nav-wrap">
+    <nav class="floating-nav" aria-label="Hauptnavigation">
+      <a href="#top" class="brand-mark">
+        <span class="brand-dot"></span>
+        <span>BRUK HOLZ</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#essences">4 Holzarten</a></li>
+        <li><a href="#catalogue">Katalog &amp; Preise</a></li>
+      </ul>
+
+      <button type="button" class="btn btn-primary" onclick="openCheckoutModal()">Warenkorb (<span id="cartCount">0</span>)</button>
+    </nav>
+  </div>
+
+  <header id="top" class="floating-hero-section">
+    <div class="container">
+      <div class="floating-stage">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Direktkatalog · 4 Holzarten · Preise in Euro (€)</span>
+            <h1>Buche, Eiche, Esche und Hainbuche.</h1>
+            <p class="hero-copy">
+              Jede Holzart vereint ihre passenden Bilder: Buchenwälder und glatte Stämme für Buche, Bauholz und goldene Jahresringe für Eiche, elastisches Holz mit braunem Kern für Esche sowie dichtes, geriffeltes Holz für Hainbuche.
+            </p>
+            <div class="hero-buttons">
+              <a href="#catalogue" class="btn btn-primary">Alle Produkte &amp; Preise ansehen</a>
+              <a href="#essences" class="btn btn-outline">Eigenschaften der 4 Holzarten</a>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric-box">
+                <strong>19 Fotos</strong>
+                <span>Nach Holzart sortiert</span>
+              </div>
+              <div class="metric-box">
+                <strong>Preise in €</strong>
+                <span>Richtwerte Markt Deutschland</span>
+              </div>
+              <div class="metric-box">
+                <strong>Direktbestellung</strong>
+                <span>Warenkorb &amp; Abschluss</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-reel-card">
+            <div class="showcase-viewport">
+              <div class="showcase-slide active">
+                <img src="images/photo-09.jpg.jpeg" alt="Buche" />
+                <div class="showcase-overlay-caption">
+                  <span class="showcase-badge">Holzart 01 · Buche</span>
+                  <div class="showcase-title">Buche — Glatte Rinde &amp; gleichmäßige Wärme</div>
+                  <div class="showcase-sub">Gleichmäßiger Abbrand, schönes Flammenbild und gute Glut</div>
+                </div>
+              </div>
+              <div class="showcase-slide">
+                <img src="images/photo-04.jpg.jpeg" alt="Eiche" />
+                <div class="showcase-overlay-caption">
+                  <span class="showcase-badge">Holzart 02 · Eiche</span>
+                  <div class="showcase-title">Eiche — Massiver Balken &amp; Bausubstanz</div>
+                  <div class="showcase-sub">Langsamer Abbrand, Stabilität und langanhaltende Wärme</div>
+                </div>
+              </div>
+              <div class="showcase-slide">
+                <img src="images/photo-05.jpg.jpeg" alt="Esche" />
+                <div class="showcase-overlay-caption">
+                  <span class="showcase-badge">Holzart 03 · Esche</span>
+                  <div class="showcase-title">Esche — Heizleistung &amp; Elastizität</div>
+                  <div class="showcase-sub">Guter Heizwert, widerstandsfähig und zuverlässig</div>
+                </div>
+              </div>
+              <div class="showcase-slide">
+                <img src="images/photo-08.jpg.jpeg" alt="Hainbuche" />
+                <div class="showcase-overlay-caption">
+                  <span class="showcase-badge">Holzart 04 · Hainbuche</span>
+                  <div class="showcase-title">Hainbuche — Helles Holz mit hoher Dichte</div>
+                  <div class="showcase-sub">Sehr hohe Dichte, langsamer Abbrand und hohe Leistung</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-controls-bar">
+              <div class="reel-tabs">
+                <button type="button" class="reel-tab-btn active" onclick="setShowcaseSlide(0)">1. Buche</button>
+                <button type="button" class="reel-tab-btn" onclick="setShowcaseSlide(1)">2. Eiche</button>
+                <button type="button" class="reel-tab-btn" onclick="setShowcaseSlide(2)">3. Esche</button>
+                <button type="button" class="reel-tab-btn" onclick="setShowcaseSlide(3)">4. Hainbuche</button>
+              </div>
+              <div class="reel-nav-btns">
+                <button type="button" class="icon-circle-btn" onclick="prevShowcaseSlide()" aria-label="Zurück">‹</button>
+                <button type="button" class="icon-circle-btn" onclick="nextShowcaseSlide()" aria-label="Weiter">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="essences" class="section">
+    <div class="container">
+      <span class="eyebrow">Wichtige Merkmale · 19 Bilder integriert</span>
+      <h2 class="section-title">Die 4 Holzarten: Eigenschaften &amp; Einsatzbereiche</h2>
+      <p class="section-subtitle">
+        Jede Holzart zeigt eigene Bilder und umfasst 4 Angebote im Katalog weiter unten.
+      </p>
+
+      <div class="species-overview-grid">
+        <article class="species-overview-card">
+          <img src="images/photo-11.jpg.jpeg" alt="Buchenwald — Buche" class="species-card-banner" />
+          <div class="species-card-content">
+            <div>
+              <span class="eyebrow">01 · Buche · 5 Fotos</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.7rem;">Gleichmäßige Wärme &amp; Holzbearbeitung</h3>
+              <ul class="species-list">
+                <li>Sehr guter Heizwert, schönes Flammenbild und gute Glut</li>
+                <li>Leicht zu spalten, kaum Funkenflug bei ausreichender Trocknung</li>
+                <li>Einsatz: Raumheizung, Tischlerei und Formteile</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-outline" onclick="filterBySpecies('Buche')">Filtern: Buche</button>
+          </div>
+        </article>
+
+        <article class="species-overview-card">
+          <img src="images/photo-01.jpg.jpeg" alt="Eichenstämme — Eiche" class="species-card-banner" />
+          <div class="species-card-content">
+            <div>
+              <span class="eyebrow">02 · Eiche · 5 Fotos</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.7rem;">Dichte, Hausbau &amp; langanhaltende Wärme</h3>
+              <ul class="species-list">
+                <li>Hohe Dichte, langsamer Abbrand und anhaltende Wärmeabgabe</li>
+                <li>Erfordert ausreichende Trocknung vor der Nutzung als Brennholz</li>
+                <li>Einsatz: Dauerwärme, Hausbau sowie Statuen &amp; Kunst</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-outline" onclick="filterBySpecies('Eiche')">Filtern: Eiche</button>
+          </div>
+        </article>
+
+        <article class="species-overview-card">
+          <img src="images/photo-10.jpg.jpeg" alt="Eschenbestand — Esche" class="species-card-banner" />
+          <div class="species-card-content">
+            <div>
+              <span class="eyebrow">03 · Esche · 5 Fotos</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.7rem;">Guter Heizwert &amp; flexible Verwendung</h3>
+              <ul class="species-list">
+                <li>Guter Heizwert, gleichmäßiger Abbrand und stabile Glut</li>
+                <li>Lässt sich vergleichsweise gut spalten</li>
+                <li>Einsatz: tägliches Heizen, elastische Bauteile und Gestaltung</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-outline" onclick="filterBySpecies('Esche')">Filtern: Esche</button>
+          </div>
+        </article>
+
+        <article class="species-overview-card">
+          <img src="images/photo-19.jpg.jpeg" alt="Waldfläche — Hainbuche" class="species-card-banner" />
+          <div class="species-card-content">
+            <div>
+              <span class="eyebrow">04 · Hainbuche · 4 Fotos</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.7rem;">Sehr hohe Dichte &amp; starke Leistung</h3>
+              <ul class="species-list">
+                <li>Sehr hohe Dichte, langsamer Abbrand und hoher Brennwert pro Raummeter</li>
+                <li>Schwerer zu spalten, dafür ausgezeichnete Glutbeständigkeit</li>
+                <li>Einsatz: intensive Dauerwärme und dichte Werkstücke</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-outline" onclick="filterBySpecies('Hainbuche')">Filtern: Hainbuche</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogue" class="section">
+    <div class="container">
+      <span class="eyebrow">Vollständiger Katalog · 16 Einträge</span>
+      <h2 class="section-title">Verfügbare Produkte &amp; Preise in Deutschland (€)</h2>
+      <p class="section-subtitle">
+        Filtern Sie nach Kategorie oder Holzart auf derselben Seite und legen Sie Artikel in den Warenkorb.
+      </p>
+
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="pill-group" id="categoryPills">
+            <button type="button" class="filter-pill active" data-cat="ALL">Alle Kategorien</button>
+            <button type="button" class="filter-pill" data-cat="Brennholz">Brennholz</button>
+            <button type="button" class="filter-pill" data-cat="Bau & Haus">Bau &amp; Haus</button>
+            <button type="button" class="filter-pill" data-cat="Statuen & Handwerk">Statuen &amp; Handwerk</button>
+            <button type="button" class="filter-pill" data-cat="Moderne Kunst">Moderne Kunst</button>
+          </div>
+
+          <div class="pill-group" id="speciesPills">
+            <button type="button" class="filter-pill active" data-species="ALL">Alle Holzarten</button>
+            <button type="button" class="filter-pill" data-species="Buche">Buche</button>
+            <button type="button" class="filter-pill" data-species="Eiche">Eiche</button>
+            <button type="button" class="filter-pill" data-species="Esche">Esche</button>
+            <button type="button" class="filter-pill" data-species="Hainbuche">Hainbuche</button>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <input type="text" id="searchInput" class="search-input" placeholder="Holzart oder Kategorie suchen..." style="flex: 1; min-width: 220px;" />
+        </div>
+      </div>
+
+      <div id="marketplaceGrid" class="marketplace-grid"></div>
+    </div>
+  </section>
+
+  <div id="checkoutModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close" onclick="closeCheckoutModal()" aria-label="Schließen">✕</button>
+      <span class="eyebrow">Bestellung</span>
+      <h3 id="checkoutTitle" style="font-family: var(--font-display); font-size: 1.9rem;">Ihr Warenkorb</h3>
+
+      <div id="checkoutItemsContainer" class="checkout-summary"></div>
+
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="buyerName">Vollständiger Name *</label>
+          <input type="text" id="buyerName" class="form-control" placeholder="Name des Käufers" required />
+        </div>
+        <div class="form-group">
+          <label for="buyerAddress">Lieferadresse *</label>
+          <input type="text" id="buyerAddress" class="form-control" placeholder="Straße, Postleitzahl und Land" required />
+        </div>
+        <div class="form-group">
+          <label for="paymentMethod">Zahlungsart</label>
+          <select id="paymentMethod" class="form-control">
+            <option value="Banküberweisung / Rechnung">Banküberweisung / Rechnung</option>
+            <option value="Kreditkarte (über Zahlungsdienstleister)">Kreditkarte (über Zahlungsdienstleister)</option>
+            <option value="PayPal">PayPal</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Bestellung absenden</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+      <div><strong>BRUK HOLZ &amp; KUNST</strong> — 19 Fotos nach Holzart sortiert auf Deutsch</div>
+      <div>Verwendete Dateien: <code>photo-01.jpg.jpeg</code> bis <code>photo-19.jpg.jpeg</code></div>
+    </div>
+  </footer>
+
+  <script>
+    const catalogListings = [
+      // BUCHE (4 Einträge + photo-11 als Banner = 5 Fotos: 09, 11, 12, 16, 18)
+      {
+        id: "buche-1",
+        title: "Buche — Brennholz im Raummeter",
+        species: "Buche",
+        category: "Brennholz",
+        price: 120,
+        unit: "pro Raummeter (Richtwert)",
+        image: "images/photo-18.jpg.jpeg",
+        desc: "Sehr guter Heizwert, gleichmäßiger Abbrand und angenehme Wärme für Öfen und Kamine."
+      },
+      {
+        id: "buche-2",
+        title: "Buche — Glatte Stämme für den Ausbau",
+        species: "Buche",
+        category: "Bau & Haus",
+        price: 185,
+        unit: "pro Posten / Stück (Richtwert)",
+        image: "images/photo-16.jpg.jpeg",
+        desc: "Gerader Wuchs und gleichmäßiges Holz, gut geeignet für Innenausbau und Tischlerarbeiten."
+      },
+      {
+        id: "buche-3",
+        title: "Buche — Bestandsholz für Skulpturen",
+        species: "Buche",
+        category: "Statuen & Handwerk",
+        price: 310,
+        unit: "Stück / Block (Richtwert)",
+        image: "images/photo-12.jpg.jpeg",
+        desc: "Feine, gleichmäßige Struktur, ideal für Drechselarbeiten, Skulpturen und Formteile."
+      },
+      {
+        id: "buche-4",
+        title: "Buche — Naturstück für moderne Kunst",
+        species: "Buche",
+        category: "Moderne Kunst",
+        price: 295,
+        unit: "Stück / Werk (Richtwert)",
+        image: "images/photo-09.jpg.jpeg",
+        desc: "Betont die glatte silbergraue Rinde und natürliche Maserung für zeitgenössische Objekte."
+      },
+
+      // EICHE (4 Einträge + photo-01 als Banner = 5 Fotos: 01, 03, 04, 06, 14)
+      {
+        id: "eiche-1",
+        title: "Eiche — Getrocknete Scheite & Rundlinge",
+        species: "Eiche",
+        category: "Brennholz",
+        price: 135,
+        unit: "pro Raummeter (Richtwert)",
+        image: "images/photo-14.jpg.jpeg",
+        desc: "Langsamer, gleichmäßiger Abbrand mit anhaltender Wärmeabgabe nach ausreichender Trocknung."
+      },
+      {
+        id: "eiche-2",
+        title: "Eiche — Kantbalken für Dachstuhl & Hausbau",
+        species: "Eiche",
+        category: "Bau & Haus",
+        price: 240,
+        unit: "pro Balken / Posten (Richtwert)",
+        image: "images/photo-04.jpg.jpeg",
+        desc: "Hohe Dichte und mechanische Festigkeit für Dachstühle, Balken und langlebige Bauwerke."
+      },
+      {
+        id: "eiche-3",
+        title: "Eiche — Massiver Block für Statuen",
+        species: "Eiche",
+        category: "Statuen & Handwerk",
+        price: 460,
+        unit: "Stück / Block (Richtwert)",
+        image: "images/photo-03.jpg.jpeg",
+        desc: "Dichtes Holz mit engen Jahresringen, geschätzt für Statuen und anspruchsvolles Handwerk."
+      },
+      {
+        id: "eiche-4",
+        title: "Eiche — Ausgewählter Stamm für Kunstobjekte",
+        species: "Eiche",
+        category: "Moderne Kunst",
+        price: 420,
+        unit: "Werk (Richtwert)",
+        image: "images/photo-06.jpg.jpeg",
+        desc: "Ausdrucksstarkes und beständiges Material für dekorative Skulpturen und Kunstwerke."
+      },
+
+      // ESCHE (4 Einträge + photo-10 als Banner = 5 Fotos: 02, 05, 07, 10, 15)
+      {
+        id: "esche-1",
+        title: "Esche — Gespaltenes Brennholz",
+        species: "Esche",
+        category: "Brennholz",
+        price: 118,
+        unit: "pro Raummeter (Richtwert)",
+        image: "images/photo-02.jpg.jpeg",
+        desc: "Guter Heizwert, lässt sich gut spalten und sorgt für gleichmäßige Wärme im Alltag."
+      },
+      {
+        id: "esche-2",
+        title: "Esche — Gerade Stämme für Innenausbau",
+        species: "Esche",
+        category: "Bau & Haus",
+        price: 195,
+        unit: "pro Posten (Richtwert)",
+        image: "images/photo-05.jpg.jpeg",
+        desc: "Widerstandsfähiges und elastisches Holz für konstruktive Elemente und Ausbauarbeiten."
+      },
+      {
+        id: "esche-3",
+        title: "Esche — Schnitt mit braunem Kern für Bildhauerei",
+        species: "Esche",
+        category: "Statuen & Handwerk",
+        price: 340,
+        unit: "Stück / Block (Richtwert)",
+        image: "images/photo-07.jpg.jpeg",
+        desc: "Natürlicher Kontrast zwischen hellem Splint und braunem Kern für Formteile und Skulpturen."
+      },
+      {
+        id: "esche-4",
+        title: "Esche — Waldauswahl für Werkstatt & Kunst",
+        species: "Esche",
+        category: "Moderne Kunst",
+        price: 380,
+        unit: "Werk (Richtwert)",
+        image: "images/photo-15.jpg.jpeg",
+        desc: "Helle Maserung und natürliche Nuancen für zeitgenössische Holzgestaltungen."
+      },
+
+      // HAINBUCHE (4 Einträge = 4 Fotos: 08, 13, 17, 19)
+      {
+        id: "hainbuche-1",
+        title: "Hainbuche — Hochdichtes Brennholz",
+        species: "Hainbuche",
+        category: "Brennholz",
+        price: 148,
+        unit: "pro Raummeter (Richtwert)",
+        image: "images/photo-17.jpg.jpeg",
+        desc: "Sehr hohe Dichte, langsamer Abbrand und hervorragende Glutbeständigkeit."
+      },
+      {
+        id: "hainbuche-2",
+        title: "Hainbuche — Hartholz-Teilstücke für den Bau",
+        species: "Hainbuche",
+        category: "Bau & Haus",
+        price: 225,
+        unit: "pro Posten (Richtwert)",
+        image: "images/photo-13.jpg.jpeg",
+        desc: "Hartes, schweres Holz, anspruchsvoller beim Spalten, aber leistungsstark in der Masse."
+      },
+      {
+        id: "hainbuche-3",
+        title: "Hainbuche — Geriffelter Stamm für Statuen",
+        species: "Hainbuche",
+        category: "Statuen & Handwerk",
+        price: 490,
+        unit: "Stück / Block (Richtwert)",
+        image: "images/photo-08.jpg.jpeg",
+        desc: "Sehr kompaktes weißliches Holz für saubere Oberflächen bei Handwerkstücken und Statuen."
+      },
+      {
+        id: "hainbuche-4",
+        title: "Hainbuche — Dichte Waldauswahl für Kunst",
+        species: "Hainbuche",
+        category: "Moderne Kunst",
+        price: 410,
+        unit: "Stück / Serie (Richtwert)",
+        image: "images/photo-19.jpg.jpeg",
+        desc: "Dichtes und langlebiges Holz für dekorative Objekte und künstlerische Serien."
+      }
+    ];
+
+    let cart = [];
+    let activeCategory = "ALL";
+    let activeSpecies = "ALL";
+    let searchQuery = "";
+    let currentSlideIndex = 0;
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderMarketplace() {
+      const grid = document.getElementById("marketplaceGrid");
+      const filtered = catalogListings.filter((item) => {
+        const matchCat = activeCategory === "ALL" || item.category === activeCategory;
+        const matchSpecies = activeSpecies === "ALL" || item.species === activeSpecies;
+        const q = searchQuery.trim().toLowerCase();
+        const matchSearch =
+          !q ||
+          item.title.toLowerCase().includes(q) ||
+          item.desc.toLowerCase().includes(q) ||
+          item.species.toLowerCase().includes(q) ||
+          item.category.toLowerCase().includes(q);
+        return matchCat && matchSpecies && matchSearch;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; background: var(--bg-surface); padding: 34px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--border-subtle);">
+            <p style="color: var(--text-secondary); margin-bottom: 12px;">Kein Produkt passt zu diesen Filtern.</p>
+            <button type="button" class="btn btn-outline" onclick="resetAllFilters()">Filter zurücksetzen</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered
+        .map(
+          (item) => `
+          <article class="product-card">
+            <div class="product-media" style="background-image: url('${escapeHtml(item.image)}')">
+              <span class="product-species-badge">${escapeHtml(item.species)}</span>
+            </div>
+            <div class="product-body">
+              <div>
+                <div class="product-cat">${escapeHtml(item.category)}</div>
+                <h3 class="product-title">${escapeHtml(item.title)}</h3>
+                <p class="product-desc">${escapeHtml(item.desc)}</p>
+              </div>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">${Number(item.price).toFixed(2).replace(".", ",")} €</span>
+                  <span class="product-unit">${escapeHtml(item.unit)}</span>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addToCart('${item.id}')">Bestellen</button>
+              </div>
+            </div>
+          </article>
+        `
+        )
+        .join("");
+    }
+
+    function filterBySpecies(speciesName) {
+      activeSpecies = speciesName;
+      document.querySelectorAll("#speciesPills .filter-pill").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.species === speciesName);
+      });
+      renderMarketplace();
+      document.getElementById("catalogue").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function resetAllFilters() {
+      activeCategory = "ALL";
+      activeSpecies = "ALL";
+      searchQuery = "";
+      document.getElementById("searchInput").value = "";
+      document.querySelectorAll("#categoryPills .filter-pill").forEach((b) => b.classList.toggle("active", b.dataset.cat === "ALL"));
+      document.querySelectorAll("#speciesPills .filter-pill").forEach((b) => b.classList.toggle("active", b.dataset.species === "ALL"));
+      renderMarketplace();
+    }
+
+    document.querySelectorAll("#categoryPills .filter-pill").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeCategory = btn.dataset.cat;
+        document.querySelectorAll("#categoryPills .filter-pill").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderMarketplace();
+      });
+    });
+
+    document.querySelectorAll("#speciesPills .filter-pill").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeSpecies = btn.dataset.species;
+        document.querySelectorAll("#speciesPills .filter-pill").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderMarketplace();
+      });
+    });
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderMarketplace();
+    });
+
+    function addToCart(id) {
+      const found = catalogListings.find((item) => item.id === id);
+      if (!found) return;
+      cart.push(found);
+      updateCartBadge();
+      openCheckoutModal();
+    }
+
+    function updateCartBadge() {
+      document.getElementById("cartCount").textContent = String(cart.length);
+    }
+
+    function openCheckoutModal() {
+      const box = document.getElementById("checkoutItemsContainer");
+      if (!cart.length) {
+        box.innerHTML = `<p style="color: var(--text-secondary); font-size: 0.9rem;">Ihr Warenkorb ist leer.</p>`;
+      } else {
+        const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+        box.innerHTML = `
+          <ul style="list-style: none; display: grid; gap: 8px; margin-bottom: 10px;">
+            ${cart
+              .map(
+                (item, idx) => `
+              <li style="display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.88rem;">
+                <span>${escapeHtml(item.title)}</span>
+                <span style="white-space: nowrap; font-weight: 600;">
+                  ${Number(item.price).toFixed(2).replace(".", ",")} €
+                  <button type="button" onclick="removeCartItem(${idx})" style="margin-left: 6px; border: none; background: transparent; cursor: pointer; color: #9E6B3B; font-weight: 700;">✕</button>
+                </span>
+              </li>`
+              )
+              .join("")}
+          </ul>
+          <div style="display: flex; justify-content: space-between; padding-top: 8px; border-top: 1px solid var(--border-subtle); font-weight: 700;">
+            <span>Gesamtsumme (Richtwert)</span>
+            <span>${total.toFixed(2).replace(".", ",")} €</span>
+          </div>
+        `;
+      }
+      document.getElementById("checkoutModal").classList.add("open");
+    }
+
+    function removeCartItem(index) {
+      cart.splice(index, 1);
+      updateCartBadge();
+      openCheckoutModal();
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById("checkoutModal").classList.remove("open");
+    }
+
+    document.getElementById("checkoutForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!cart.length) {
+        closeCheckoutModal();
+        return;
+      }
+      const buyerName = document.getElementById("buyerName").value.trim();
+      const buyerAddress = document.getElementById("buyerAddress").value.trim();
+      alert(`Vielen Dank, ${buyerName}! Ihre Bestellanfrage für ${buyerAddress} wurde erfasst.`);
+      cart = [];
+      updateCartBadge();
+      e.target.reset();
+      closeCheckoutModal();
+    });
+
+    const slides = document.querySelectorAll(".showcase-slide");
+    const reelTabs = document.querySelectorAll(".reel-tab-btn");
+
+    function setShowcaseSlide(index) {
+      currentSlideIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, idx) => slide.classList.toggle("active", idx === currentSlideIndex));
+      reelTabs.forEach((tab, idx) => tab.classList.toggle("active", idx === currentSlideIndex));
+    }
+
+    function nextShowcaseSlide() {
+      setShowcaseSlide(currentSlideIndex + 1);
+    }
+
+    function prevShowcaseSlide() {
+      setShowcaseSlide(currentSlideIndex - 1);
+    }
+
+    setInterval(() => nextShowcaseSlide(), 6000);
+
+    renderMarketplace();
+    updateCartBadge();
+  </script>
+</body>
+</html>
